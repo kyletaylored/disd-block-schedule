@@ -41,7 +41,7 @@ function getAorB(day) {
   if (day == 3 || day == 4) {
     return 'B'
   }
-  return 'None'
+  return 'All'
 }
 
 function assignCohort(day, day_diff, obj) {
