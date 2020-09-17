@@ -1,59 +1,55 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <title>What Day Is It? | Unofficial Denton ISD</title>
     <meta name="title" content="What Day Is It? | Unofficial Denton ISD" />
-    <meta
-      name="description"
-      content="An unofficial site that tells students at Denton ISD which block day it is, and which cohort is at school or studying remotely."
-    />
+    <meta name="description" content="An unofficial site that tells students at Denton ISD which block day it is, and which cohort is at school or studying remotely." />
     <meta name="keywords" content="denton, denton isd, block schedule" />
     <meta name="robots" content="index, follow" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="language" content="English" />
     <meta name="author" content="Kyle Taylor <kyle@techmill.co>" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
-      crossorigin="anonymous"
-    />
+    <script src="/cdn-cgi/apps/head/ySdAXL0wLQzDzQHStaC4keIVb8s.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
     <link rel="stylesheet" href="/style.css" />
-  </head>
-  <body>
-    <div id="main" class="container text-center">
-      <div id="block-day" class="">
-        <header id="current-date" class="mb-3">
-          <h4 class="today-is">Today is...</h4>
-          <h4 class="date"><span></span></h4>
-        </header>
-        <div id="letter">
-          <h1></h1>
+</head>
+
+<body>
+    <div id="main" class="container text-center row offset-md-2">
+        <div id="block-day" class="col-md-8">
+            <header id="current-date" class="mb-3">
+                <h4 class="today-is">Today is...</h4>
+                <h4 class="date"><span></span></h4>
+            </header>
+            <div id="letter">
+                <h1></h1>
+            </div>
+            <div id="cohort">
+                <div id="cohort-1">
+                    <h3></h3>
+                </div>
+                <div id="cohort-2">
+                    <h3></h3>
+                </div>
+            </div>
+            <div id="text">
+                <p class="display-3"></p>
+            </div>
+            <hr />
+            <footer>
+                <div id="tomorrow"></div>
+                <p class="small">Disclaimer: This is an unofficial site that tells students at Denton ISD which block day it is and which cohort is at school or studying remotely. This information is based off <a href="https://www.dentonisd.org/Page/102412">the hybrid schedule posted on the Denton ISD website</a>.</p>
+                <p class="small">Please check the Denton ISD Twitter feed for weather and health related schedule changes and closures.</p>
+            </footer>
         </div>
-        <div id="cohort">
-          <div id="cohort-1">
-            <h3></h3>
-          </div>
-          <div id="cohort-2">
-            <h3></h3>
-          </div>
+        <div class="col-md-4">
+        	<a class="twitter-timeline" data-width="300" data-height="500" data-theme="light" href="https://twitter.com/dentonisd?ref_src=twsrc%5Etfw">Tweets by dentonisd</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
-        <div id="text">
-          <p class="display-3"></p>
-        </div>
-        <hr />
-        <footer>
-          <div id="tomorrow"></div>
-          <p class="small">Disclaimer: This is an unofficial site that tells students at Denton ISD which block day it is and which cohort is at school or studying remotely. This information is based off <a href="https://www.dentonisd.org/Page/102412">the hybrid schedule posted on the Denton ISD website</a>.
-        </footer>
-      </div>
     </div>
-  </body>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"
-    integrity="sha512-rmZcZsyhe0/MAjquhTgiUcb4d9knaFc7b5xAfju483gbEXTkeJRUMIPk6s3ySZMYUHEcjKbjLjyddGWMrNEvZg=="
-    crossorigin="anonymous"
-  ></script>
-  <script src="/main.js"></script>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js" integrity="sha512-rmZcZsyhe0/MAjquhTgiUcb4d9knaFc7b5xAfju483gbEXTkeJRUMIPk6s3ySZMYUHEcjKbjLjyddGWMrNEvZg==" crossorigin="anonymous"></script>
+<script src="/main.js"></script>
+
 </html>
