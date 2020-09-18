@@ -35,6 +35,7 @@ function getCohort(isOdd) {
  */
 function getAorB(day) {
   day = day > 6 ? day - 7 : day
+  console.log({ day })
   if (day == 1 || day == 2) {
     return 'A'
   }
@@ -44,11 +45,11 @@ function getAorB(day) {
   return 'All'
 }
 
-function assignCohort(day, day_diff, obj) {
+function assignCohort(day, week_diff, obj) {
   // Assign default data.
   obj.cohort = getCohort()
   day = day > 6 ? day - 7 : day
-
+  console.log({ week_diff })
   switch (day) {
     // Mon/Weds
     case 1:
@@ -65,8 +66,9 @@ function assignCohort(day, day_diff, obj) {
     // Friday
     case 5:
       // Calculate Friday Cohort
-      weeks_since = day_diff / 7
-      if (weeks_since % 2 === 1) {
+      var offset = Math.abs(week_diff % 2)
+      console.log({ offset })
+      if (offset === 1) {
         obj.cohort = getCohort(true)
       }
       break
@@ -143,10 +145,11 @@ var cohortGenesis = moment([2020, 09, 11])
 
 // To calculate the no. of days between two dates
 var day_diff = today.diff(cohortGenesis, 'days')
+var week_diff = today.diff(cohortGenesis, 'weeks')
 
 // Get cohort information
-assignCohort(day, day_diff, todayText)
-assignCohort(day + 1, day_diff, tomorrowText)
+assignCohort(day, week_diff, todayText)
+assignCohort(day + 1, week_diff, tomorrowText)
 
 // Check Holiday
 if (holidays.hasOwnProperty(today.format('L'))) {
